@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# Store Master
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+master template for E-Commerce 
 ## Available Scripts
 
 In the project directory, you can run:
