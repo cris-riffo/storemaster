@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -22,11 +23,13 @@ const useStyles = makeStyles({
     }
 });
 
-const ProductCard = ({ picture, alt, label, buttonLabel, onClick }) => {
+const ProductCard = ({ img, picture, alt, label, buttonLabel, onClick }) => {
+    console.log('picture', picture)
     const classes = useStyles();
 
     return <Card className={classes.root}>
-        <CardMedia className={classes.media}
+        <CardMedia
+         className={classes.media}
             image={picture} title={alt} />
         <Grid container alignItems="center" spacing={4}>
             <Grid  item xs={7}>
@@ -45,6 +48,10 @@ const ProductCard = ({ picture, alt, label, buttonLabel, onClick }) => {
             </Grid>
         </Grid>
     </Card>
+}
+
+ProductCard.propTypes = {
+    img: PropTypes.bool.isRequired
 }
 
 export default ProductCard;
