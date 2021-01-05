@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     }
 });
 
-const ProductCard = ({ img, picture, alt, label, buttonLabel, onClick }) => {
+const ProductCard = ({  picture, alt, label, buttonLabel, onClick }) => {
     console.log('picture', picture)
     const classes = useStyles();
 
@@ -51,7 +51,10 @@ const ProductCard = ({ img, picture, alt, label, buttonLabel, onClick }) => {
 }
 
 ProductCard.propTypes = {
-    img: PropTypes.bool.isRequired
+    picture: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    buttonLabel: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
 }
 
 export default ProductCard;
